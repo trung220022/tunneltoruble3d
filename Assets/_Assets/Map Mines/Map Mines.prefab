@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7555967629938496110
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4629205316074956389}
+  - component: {fileID: 5849672325828479829}
+  m_Layer: 0
+  m_Name: Map Mines
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4629205316074956389
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7555967629938496110}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5849672325828479829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7555967629938496110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3836fe542f4b28d44a5e37c0a38a6a95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mapPrefabs:
+  - {fileID: 1366680393961591399, guid: 0375b17f9f500f44cab0f00edbbd64b1, type: 3}
+  - {fileID: 644241456638127797, guid: acc569941c949e34b8a2966662936d4c, type: 3}
+  - {fileID: 6637433000342929453, guid: 6e7094a2d8336dc4c95f7222651250a4, type: 3}
+  - {fileID: 7401014855132709355, guid: 06f36d9533935454c9011fbff0070df8, type: 3}
+  - {fileID: 653831440802907142, guid: 73267050e49ca1d49ad96469d3a3ed20, type: 3}
+  - {fileID: 8402675007877518497, guid: 7339459d30b8f4f4883ff79dd27171f4, type: 3}
+  - {fileID: 3998430842850933184, guid: 43dc8292431be82458e9f0f6f5542b3e, type: 3}
+  - {fileID: 686129988832540071, guid: 716ee65dc2c3fe24cb97d2a729134774, type: 3}
+  - {fileID: 7588169476859819472, guid: 4aeaf465de0eb7c45b6aab10085eeb22, type: 3}
+  - {fileID: 5421622038666386360, guid: 0923fc5ffc96f02418dc11ae21770711, type: 3}
+  - {fileID: 5409480589972496752, guid: 22774499af53c20418ede0b993acc6fa, type: 3}
+  - {fileID: 3820060552465356578, guid: 5f36c5096af10754b9eeecb2d0a45d60, type: 3}
+  - {fileID: 2540094023852934570, guid: e7f4de3bbd4002842a92f683d58a2dd1, type: 3}
+  - {fileID: 8176577150558296288, guid: 40ac7363c77348e4189124c6cc57624c, type: 3}
+  - {fileID: 4056139419696692710, guid: b5800d607ff40f8439c2945173f93623, type: 3}
+  - {fileID: 8794786558215792709, guid: fd41f139be05816458c92a4c9489c7df, type: 3}
+  - {fileID: 7147394793248663704, guid: 14b5e7c55e31e604ba3cad3c0910b470, type: 3}
+  - {fileID: 225199229944810726, guid: deb995c7f9ff8c1459b2cc501ba9b3db, type: 3}
+  - {fileID: 80814929898918957, guid: f747cd5b8ec8d5f4d8d59cf8c05d5aeb, type: 3}
+  - {fileID: 6405573020838190750, guid: c7368e72fbde91849bdd432c95202a89, type: 3}
+  - {fileID: 5994194522344288143, guid: 1a7c915ee92a1c74d99779877c2eb1e4, type: 3}
+  - {fileID: 4468421403080821209, guid: 6d4e84d7d83156042958da66791ca4ef, type: 3}
+  - {fileID: 2829275403041679596, guid: 5b988baa96f2ad44487629f8b95155ae, type: 3}
+  mapCount: 23
+  startPositions:
+  - 45
+  - 140
+  - 235
+  - 330
+  - 425
+  - 520
+  - 615
+  - 710
+  - 805
+  - 900
+  - 995
+  - 1090
+  - 1185
+  - 1280
+  - 1375
+  - 1470
+  - 1565
+  - 1660
+  - 1755
+  - 1850
+  - 1945
+  - 2040
+  - 2135
