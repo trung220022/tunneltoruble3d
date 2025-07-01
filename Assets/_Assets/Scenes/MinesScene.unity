@@ -29325,12 +29325,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900f337b459e3424dbe5597f629f84a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 12.5
+  moveSpeed: 15
   maxX: 5
   maxY: 5
   tiltAngle: 20
   tiltForwardAngle: 75
-  tiltSmooth: 5
+  tiltSmooth: 10
   defaultRotation: {x: 75, y: 0, z: 0}
   dieSound: {fileID: 8300000, guid: 3dbc1a07c107dd941afab4a93fd21643, type: 3}
   dieVolume: 0.25
@@ -29627,12 +29627,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900f337b459e3424dbe5597f629f84a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 12.5
+  moveSpeed: 15
   maxX: 5
   maxY: 5
   tiltAngle: 30
   tiltForwardAngle: 300
-  tiltSmooth: 5
+  tiltSmooth: 10
   defaultRotation: {x: 300, y: -180, z: 0}
   dieSound: {fileID: 8300000, guid: 3dbc1a07c107dd941afab4a93fd21643, type: 3}
   dieVolume: 0.25
@@ -44105,12 +44105,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900f337b459e3424dbe5597f629f84a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 12.5
+  moveSpeed: 15
   maxX: 5
   maxY: 5
   tiltAngle: 30
   tiltForwardAngle: -60
-  tiltSmooth: 5
+  tiltSmooth: 10
   defaultRotation: {x: -60, y: 180, z: 0}
   dieSound: {fileID: 8300000, guid: 3dbc1a07c107dd941afab4a93fd21643, type: 3}
   dieVolume: 0.25
@@ -44427,12 +44427,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900f337b459e3424dbe5597f629f84a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 12.5
+  moveSpeed: 15
   maxX: 5
   maxY: 5
   tiltAngle: 30
   tiltForwardAngle: -80
-  tiltSmooth: 5
+  tiltSmooth: 10
   defaultRotation: {x: -80, y: 180, z: 0}
   dieSound: {fileID: 8300000, guid: 3dbc1a07c107dd941afab4a93fd21643, type: 3}
   dieVolume: 0.25
@@ -58925,12 +58925,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900f337b459e3424dbe5597f629f84a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 12.5
+  moveSpeed: 15
   maxX: 5
   maxY: 5
   tiltAngle: 30
   tiltForwardAngle: -60
-  tiltSmooth: 5
+  tiltSmooth: 10
   defaultRotation: {x: -60, y: 180, z: 0}
   dieSound: {fileID: 8300000, guid: 3dbc1a07c107dd941afab4a93fd21643, type: 3}
   dieVolume: 0.25
@@ -85423,12 +85423,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900f337b459e3424dbe5597f629f84a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 12.5
+  moveSpeed: 15
   maxX: 5
   maxY: 5
   tiltAngle: 30
   tiltForwardAngle: 20
-  tiltSmooth: 5
+  tiltSmooth: 10
   defaultRotation: {x: 20, y: 180, z: 0}
   dieSound: {fileID: 8300000, guid: 3dbc1a07c107dd941afab4a93fd21643, type: 3}
   dieVolume: 0.25
@@ -92703,7 +92703,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1606808628}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2012712103}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: LoadMenuAndShowHighscore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2012712102}
+        m_TargetAssemblyTypeName: GameMusicManager, Assembly-CSharp
+        m_MethodName: PlayButtonClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1606808628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97566,12 +97590,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900f337b459e3424dbe5597f629f84a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 12.5
+  moveSpeed: 15
   maxX: 5
   maxY: 5
   tiltAngle: 30
   tiltForwardAngle: -60
-  tiltSmooth: 5
+  tiltSmooth: 10
   defaultRotation: {x: -60, y: 180, z: 0}
   dieSound: {fileID: 8300000, guid: 3dbc1a07c107dd941afab4a93fd21643, type: 3}
   dieVolume: 0.25
@@ -97710,12 +97734,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900f337b459e3424dbe5597f629f84a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 12.5
+  moveSpeed: 15
   maxX: 5
   maxY: 5
   tiltAngle: 30
   tiltForwardAngle: -65
-  tiltSmooth: 5
+  tiltSmooth: 10
   defaultRotation: {x: -65, y: 180, z: 0}
   dieSound: {fileID: 8300000, guid: 3dbc1a07c107dd941afab4a93fd21643, type: 3}
   dieVolume: 0.25
@@ -133544,6 +133568,7 @@ MonoBehaviour:
   readyGoText: {fileID: 2058723651}
   scoreText: {fileID: 829194607}
   isGameStarted: 0
+  sceneKey: Level2
   readyTime: 1
   goTime: 1
   gameOverPanel: {fileID: 362807815}

@@ -7,40 +7,43 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public Text readyGoText; // Text "Ready" và "Go"
-    public Text scoreText;   // Text hiển thị điểm
+    public Text readyGoText;
+    public Text scoreText;
 
     [HideInInspector]
-    public bool isGameStarted = false; // Trạng thái bắt đầu game
+    public bool isGameStarted = false;
+
+    [Header("Tên dùng để lưu điểm (tự gán theo scene)")]
+    public string sceneKey = "Level1"; // 👈 Kéo gán tay trong Inspector
 
     [Header("Thời gian hiển thị (giây)")]
-    public float readyTime = 1f;       // Thời gian hiển thị "Ready"
-    public float goTime = 1f;          // Thời gian hiển thị "Go"
+    public float readyTime = 1f;
+    public float goTime = 1f;
 
-    private int score = 0;             // Điểm hiện tại
+    private int score = 0;
 
     [Header("Panel Thua Game")]
-    public GameObject gameOverPanel;  // Panel khi thua
-    public Text finalScoreText;       // Text điểm cuối cùng
-    public Text highScoreText;        // Text điểm cao nhất
+    public GameObject gameOverPanel;
+    public Text finalScoreText;
+    public Text highScoreText;
 
-    private float scoreTimer = 0f;     // Bộ đếm thời gian tăng điểm
-    public float scoreInterval = 0.25f; // Thời gian mỗi lần tăng điểm
+    private float scoreTimer = 0f;
+    public float scoreInterval = 0.25f;
 
     private void Awake()
     {
-        if (Instance == null) Instance = this; // Singleton
+        if (Instance == null) Instance = this;
         else Destroy(gameObject);
 
-        Application.targetFrameRate = 60;      // Giới hạn FPS
+        Application.targetFrameRate = 60;
     }
 
     private void Start()
     {
         if (gameOverPanel != null)
-            gameOverPanel.SetActive(false);   // Ẩn panel thua lúc đầu
+            gameOverPanel.SetActive(false);
 
-        StartCoroutine(ReadyGoSequence());    // Bắt đầu chuỗi Ready-Go
+        StartCoroutine(ReadyGoSequence());
     }
 
     IEnumerator ReadyGoSequence()
@@ -65,12 +68,12 @@ public class GameManager : MonoBehaviour
     {
         if (!isGameStarted) return;
 
-        scoreTimer += Time.deltaTime; // Cộng thời gian
+        scoreTimer += Time.deltaTime;
         if (scoreTimer >= scoreInterval)
         {
-            int pointsToAdd = Mathf.FloorToInt(scoreTimer / scoreInterval); // Tính số điểm cần cộng
+            int pointsToAdd = Mathf.FloorToInt(scoreTimer / scoreInterval);
             AddScore(pointsToAdd);
-            scoreTimer -= pointsToAdd * scoreInterval; // Giữ phần dư
+            scoreTimer -= pointsToAdd * scoreInterval;
         }
     }
 
@@ -78,44 +81,52 @@ public class GameManager : MonoBehaviour
     {
         if (!isGameStarted) return;
 
-        score += amount;              // Cộng điểm
+        score += amount;
         UpdateScoreText();
     }
 
     void UpdateScoreText()
     {
         if (scoreText != null)
-            scoreText.text = score.ToString(); // Cập nhật UI điểm
+            scoreText.text = score.ToString();
     }
 
     public void GameOver()
     {
         isGameStarted = false;
 
-        int highScore = PlayerPrefs.GetInt("HighScore", 0);
-        if (score > highScore)                  // Lưu high score mới nếu cần
+        string highScoreKey = "HighScore_" + sceneKey; // 👈 Dùng key gán thủ công
+
+        int highScore = PlayerPrefs.GetInt(highScoreKey, 0);
+        if (score > highScore)
         {
             highScore = score;
-            PlayerPrefs.SetInt("HighScore", highScore);
+            PlayerPrefs.SetInt(highScoreKey, highScore);
+            PlayerPrefs.Save(); // 👈 Ép lưu
         }
 
         if (finalScoreText != null)
-            finalScoreText.text = "" + score;   // Cập nhật điểm cuối
+            finalScoreText.text = "" + score;
 
         if (highScoreText != null)
-            highScoreText.text = "" + highScore; // Cập nhật điểm cao nhất
+            highScoreText.text = "" + highScore;
 
         if (gameOverPanel != null)
-            gameOverPanel.SetActive(true);      // Hiện panel thua
+            gameOverPanel.SetActive(true);
     }
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Tải lại scene hiện tại
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void LoadMenuScene()
     {
-        SceneManager.LoadScene("MainScene"); // Chuyển về scene menu
+        SceneManager.LoadScene("MainScene");
+    }
+    public void LoadMenuAndShowHighscore()
+    {
+        PlayerPrefs.SetInt("ShowHighscoreOnMenu", 1); // Ghi cờ để hiện bảng điểm
+        SceneManager.LoadScene("MainScene");          // Đổi tên nếu menu bạn khác
     }
 }
